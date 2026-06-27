@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0a0a1a,100:0d1117&height=220&section=header&text=Diego%20Montilla&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20Automation%20%7C%20Colombia&descAlignY=58&descSize=16&descColor=4a90d9"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0a0a1a,100:0d1117&height=220&section=header&text=Diego%20Mantilla&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20Automation%20%7C%20Colombia&descAlignY=58&descSize=16&descColor=4a90d9"/>
 </div>
 
 <div align="center">
@@ -19,7 +19,7 @@
 
 ```yaml
 # whoami
-name:      Diego Montilla
+name:      Diego Mantilla
 from:      Colombia 🇨🇴
 role:      Junior Full-Stack Developer
 stack:     [JS, Python, Lua, HTML, CSS]
@@ -116,6 +116,14 @@ fixed/day: more than created (usually)
 
 ---
 
+## TROPHIES
+
+<div align="center">
+  <img src="https://github-profile-trophy-fork-two.vercel.app/?username=DMntill4&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7"/>
+</div>
+
+---
+
 ## CONTRIBUTION GRAPH
 
 <div align="center">
@@ -124,18 +132,10 @@ fixed/day: more than created (usually)
 
 ---
 
-## TROPHIES
+## DEV JOKE OF THE DAY
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DMntill4&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7"/>
-</div>
-
----
-
-## RANDOM DEV QUOTE
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&border=true"/>
+  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight&hideBorder" alt="Dev joke"/>
 </div>
 
 ---
