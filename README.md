@@ -7,8 +7,8 @@
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=DMntill4&style=for-the-badge&color=0d1117&labelColor=0a0a1a&label=PROFILE+VIEWS&color=4a90d9" />
-  <img src="https://img.shields.io/github/followers/DMntill4?style=for-the-badge&labelColor=0a0a1a&color=4a90d9&label=FOLLOWERS&logo=github&logoColor=white" />
+  <img src="https://komarev.com/ghpvc/?username=DMntill4&style=for-the-badge&color=4a90d9&labelColor=0a0a1a&label=PROFILE+VIEWS"/>
+  <img src="https://img.shields.io/github/followers/DMntill4?style=for-the-badge&labelColor=0a0a1a&color=4a90d9&label=FOLLOWERS&logo=github&logoColor=white"/>
 </div>
 
 <br/>
@@ -79,7 +79,6 @@ fixed/day: more than created (usually)
     <td width="50%" valign="top">
       <h3>Pizzería DB</h3>
       <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
-      <img src="https://img.shields.io/badge/SQL-CC2927?style=flat-square&logoColor=white"/>
       <br/><br/>
       <p>Relational database architecture for restaurant ops. Full schema design, normalization, FK constraints, and complex queries for inventory + order reporting.</p>
     </td>
@@ -107,7 +106,7 @@ fixed/day: more than created (usually)
 ## STATS
 
 <div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=DMntill4&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=4a90d9&icon_color=4a90d9&text_color=ffffff&include_all_commits=true&count_private=true"/>
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=DMntill4&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=4a90d9&icon_color=4a90d9&text_color=ffffff"/>
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DMntill4&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=4a90d9&text_color=ffffff&langs_count=6"/>
 </div>
 
@@ -125,6 +124,22 @@ fixed/day: more than created (usually)
 
 ---
 
+## TROPHIES
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=DMntill4&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7"/>
+</div>
+
+---
+
+## RANDOM DEV QUOTE
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&border=true"/>
+</div>
+
+---
+
 ## CONNECT
 
 <div align="center">
@@ -132,8 +147,8 @@ fixed/day: more than created (usually)
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   &nbsp;
-  <a href="mailto:TU_EMAIL">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+  <a href="https://discord.com/users/TU_DISCORD_ID">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
   </a>
   &nbsp;
   <a href="https://github.com/DMntill4">
