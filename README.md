@@ -143,11 +143,11 @@ fixed/day: more than created (usually)
 ## CONNECT
 
 <div align="center">
-  <a href="https://linkedin.com/in/TU_LINKEDIN">
+  <a href="https://www.linkedin.com/in/diego-mantilla-156928419/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   &nbsp;
-  <a href="https://discord.com/users/TU_DISCORD_ID">
+  <a href="https://discord.com/users/dieg.0m">
     <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
   </a>
   &nbsp;
