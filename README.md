@@ -107,7 +107,7 @@ fixed/day: more than created (usually)
 
 <div align="center">
 
-  ### 🌐 See my work in action
+  ### See my work in action
 
   <br/>
 
