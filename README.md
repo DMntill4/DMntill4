@@ -107,17 +107,17 @@ fixed/day: more than created (usually)
 
 <div align="center">
 
-  ### See my work in action
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=4A90D9&center=true&vCenter=true&width=600&lines=Check+out+my+work+%F0%9F%9A%80;Built+with+passion+%26+automation;See+what+I've+been+cooking...;%E2%86%93+Visit+my+portfolio+%E2%86%93" alt="Typing SVG" />
 
-  <br/>
+<br/><br/>
 
-  <a href="https://YOUR-PORTFOLIO-URL.com">
-    <img src="https://img.shields.io/badge/Visit%20Portfolio-%234a90d9?style=for-the-badge&logo=firefox&logoColor=white&labelColor=0a0a1a"/>
-  </a>
+<a href="https://YOUR-PORTFOLIO-URL.com">
+  <img src="https://img.shields.io/badge/🌐%20%20VISIT%20PORTFOLIO-%234a90d9?style=for-the-badge&logoColor=white&labelColor=0a0a1a"/>
+</a>
 
-  <br/><br/>
+<br/><br/>
 
-  > *"Code is not just written — it's crafted."*
+> *"Code is not just written — it's crafted."*
 
 </div>
 
