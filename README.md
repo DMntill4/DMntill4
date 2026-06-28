@@ -39,7 +39,7 @@ fixed/day: more than created (usually)
 **Automation & Infra**
 
 <div>
-  <img src="https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=scrumalliance&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scrum-6DB33F?style=for-the-badge&logo=scrumalliance&logoColor=white&label=Scrum%20%7C%20Agile"/>
   <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
@@ -100,6 +100,26 @@ fixed/day: more than created (usually)
     </td>
   </tr>
 </table>
+
+---
+
+## PORTFOLIO
+
+<div align="center">
+
+  ### 🌐 See my work in action
+
+  <br/>
+
+  <a href="https://YOUR-PORTFOLIO-URL.com">
+    <img src="https://img.shields.io/badge/Visit%20Portfolio-%234a90d9?style=for-the-badge&logo=firefox&logoColor=white&labelColor=0a0a1a"/>
+  </a>
+
+  <br/><br/>
+
+  > *"Code is not just written — it's crafted."*
+
+</div>
 
 ---
 
