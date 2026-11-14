@@ -41,6 +41,12 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <br/>
 
+<img src="./assets/profile/section-activity.svg" width="100%" alt="Activity & Stats">
+
+<img src="./assets/profile/activity-card.svg" width="100%" alt="Diego Mantilla GitHub Activity & Dev Cat Business Card">
+
+<br/>
+
 <img src="./assets/profile/section-contact.svg" width="100%" alt="Contact">
 
 <a href="https://www.linkedin.com/in/diego-mantilla-156928419/"><img src="./assets/profile/contact.svg" width="100%" alt="Have an idea? Let's talk. Open to junior software engineer roles and collaborations."></a>

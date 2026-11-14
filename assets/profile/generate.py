@@ -82,10 +82,11 @@ def section(num, title, name):
 
 section("01", "Projects", "section-projects.svg")
 section("02", "Stack", "section-stack.svg")
-section("03", "Contact", "section-contact.svg")
+section("03", "Activity & Stats", "section-activity.svg")
+section("04", "Contact", "section-contact.svg")
 
 # ---------------- PROJECT CARDS (2x2 bento) ----------------
-def project(name, glyph, title, l1, l2, tech, status, dot):
+def project(name, glyph, title, l1, l2, tech, status, dot, is_wip=False):
     w, h = 446, 226
     b = panel(w, h, 20)
     b += f'<rect x="24" y="24" width="46" height="46" rx="13" fill="url(#g)" fill-opacity=".18" stroke="url(#g)"/>'
@@ -98,14 +99,22 @@ def project(name, glyph, title, l1, l2, tech, status, dot):
     b += f'<text x="24" y="134" font-family="{SANS}" font-size="13.5" fill="{MUTED}">{e(l1)}</text>'
     b += f'<text x="24" y="153" font-family="{SANS}" font-size="13.5" fill="{MUTED}">{e(l2)}</text>'
     b += pills(24, 178, tech)
-    b += f'<circle cx="{w-40}" cy="{h-40}" r="16" fill="url(#g)"/>'
-    b += f'<path d="M{w-46} {h-34} L{w-34} {h-46} M{w-44} {h-46} H{w-34} V{h-36}" stroke="{BG}" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+    
+    if is_wip:
+        # lock / in-progress badge instead of outbound arrow
+        b += f'<circle cx="{w-40}" cy="{h-40}" r="16" fill="{CARD}" stroke="{LINE}" stroke-width="1.5"/>'
+        # lock icon
+        b += f'<rect x="{w-46}" y="{h-40}" width="12" height="10" rx="2" fill="none" stroke="{MUTED}" stroke-width="1.8"/>'
+        b += f'<path d="M{w-44} {h-40} v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="{MUTED}" stroke-width="1.8" stroke-linecap="round"/>'
+    else:
+        b += f'<circle cx="{w-40}" cy="{h-40}" r="16" fill="url(#g)"/>'
+        b += f'<path d="M{w-46} {h-34} L{w-34} {h-46} M{w-44} {h-46} H{w-34} V{h-36}" stroke="{BG}" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
     svg(w, h, b, f"project-{name}.svg")
 
 project("ai-back-office", "AI", "AI Back Office", "Autonomous ReAct agent for procurement & logistics", "with Grok xAI, Supabase PG & Drizzle ORM.", ["Grok", "TypeScript", "PostgreSQL", "Fastify"], "AGENT", CYAN)
 project("sica", "BIO", "SICA: Access Control", "Hexagonal Java 21 architecture + 128D facial AI", "biometrics, web self-service & Swing GUI.", ["Java 21", "Computer Vision", "JWT", "MySQL"], "ENTERPRISE", GREEN)
 project("opus-rentals", "SaaS", "Opus Rentals", "Full-stack rental platform: Spring Boot 3, DDD,", "4NF relational DB and responsive web client.", ["Java 21", "Spring Boot", "MySQL", "Docker"], "ENTERPRISE", "#febc2e")
-project("restora", "SaaS", "Restora (SaaS B2B)", "Multi-tenant restaurant ops & anti-waste inventory", "with FEFO engine, WhatsApp alerts & AI OCR.", ["Java 21", "Spring Boot", "FastAPI", "React"], "SAAS CORE", VIOLET)
+project("restora", "SaaS", "Restora (SaaS B2B)", "Multi-tenant restaurant ops & anti-waste inventory", "with FEFO engine, WhatsApp alerts & AI OCR.", ["Java 21", "Spring Boot", "FastAPI", "React"], "WORK IN PROGRESS", "#a855f7", is_wip=True)
 
 # ---------------- CONTACT ----------------
 b = panel(900, 170, 24)
@@ -117,4 +126,111 @@ for r, o in [(70, .10), (50, .16), (30, .24)]:
 b += f'<circle cx="790" cy="85" r="18" fill="url(#g)"/>'
 b += f'<path d="M782 93 L798 77 M784 77 H798 V91" stroke="{BG}" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
 svg(900, 170, b, "contact.svg")
+
+# ---------------- ACTIVITY & COMMIT GRAPH + CUTE CAT CARD ----------------
+import subprocess, json
+
+def build_activity_card():
+    w, h = 900, 260
+    b = panel(w, h, 20)
+    
+    # Left Section: Cat Developer Business Card
+    cx, cy, cw, ch = 24, 24, 270, 212
+    b += f'<rect x="{cx}" y="{cy}" width="{cw}" height="{ch}" rx="16" fill="{BG}" stroke="{LINE}"/>'
+    
+    # Cute Business Card Header
+    b += f'<rect x="{cx}" y="{cy}" width="{cw}" height="32" rx="16" fill="#161f30"/>'
+    b += f'<rect x="{cx}" y="{cy+16}" width="{cw}" height="16" fill="#161f30"/>'
+    for i, c in enumerate(["#ff5f57", "#febc2e", "#28c840"]):
+        b += f'<circle cx="{cx+18+i*16}" cy="{cy+16}" r="4.5" fill="{c}"/>'
+    b += f'<text x="{cx+cw-14}" y="{cy+20}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}">dev_cat.id</text>'
+    
+    # Cute Programmer Cat SVG illustration (centered in card)
+    # Cat face / ears / blushing / laptop
+    cat_x, cat_y = cx + 55, cy + 50
+    # Ears
+    b += f'<polygon points="{cat_x+10},{cat_y+22} {cat_x+24},{cat_y+2} {cat_x+34},{cat_y+20}" fill="#334155" stroke="{CYAN}" stroke-width="1.5"/>'
+    b += f'<polygon points="{cat_x+14},{cat_y+20} {cat_x+24},{cat_y+8} {cat_x+30},{cat_y+18}" fill="#f472b6" opacity="0.6"/>'
+    b += f'<polygon points="{cat_x+66},{cat_y+20} {cat_x+76},{cat_y+2} {cat_x+90},{cat_y+22}" fill="#334155" stroke="{CYAN}" stroke-width="1.5"/>'
+    b += f'<polygon points="{cat_x+70},{cat_y+18} {cat_x+76},{cat_y+8} {cat_x+86},{cat_y+20}" fill="#f472b6" opacity="0.6"/>'
+    # Head
+    b += f'<ellipse cx="{cat_x+50}" cy="{cat_y+36}" rx="38" ry="28" fill="#1e293b" stroke="{CYAN}" stroke-width="1.8"/>'
+    # Eyes (happy / anime coder eyes ^^)
+    b += f'<path d="M{cat_x+32} {cat_y+34} Q{cat_x+38} {cat_y+28} {cat_x+44} {cat_y+34}" fill="none" stroke="{WHITE}" stroke-width="2.5" stroke-linecap="round"/>'
+    b += f'<path d="M{cat_x+56} {cat_y+34} Q{cat_x+62} {cat_y+28} {cat_x+68} {cat_y+34}" fill="none" stroke="{WHITE}" stroke-width="2.5" stroke-linecap="round"/>'
+    # Cute Blushing cheeks
+    b += f'<circle cx="{cat_x+28}" cy="{cat_y+40}" r="4" fill="#f43f5e" opacity="0.5"/>'
+    b += f'<circle cx="{cat_x+72}" cy="{cat_y+40}" r="4" fill="#f43f5e" opacity="0.5"/>'
+    # Snout & Mouth :3
+    b += f'<polygon points="{cat_x+48},{cat_y+37} {cat_x+52},{cat_y+37} {cat_x+50},{cat_y+40}" fill="#f472b6"/>'
+    b += f'<path d="M{cat_x+44} {cat_y+41} Q{cat_x+48} {cat_y+46} {cat_x+50} {cat_y+41} Q{cat_x+52} {cat_y+46} {cat_x+56} {cat_y+41}" fill="none" stroke="{WHITE}" stroke-width="1.6" stroke-linecap="round"/>'
+    # Whiskers
+    b += f'<line x1="{cat_x+16}" y1="{cat_y+37}" x2="{cat_x+2}" y2="{cat_y+34}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+16}" y1="{cat_y+42}" x2="{cat_x+3}" y2="{cat_y+43}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+84}" y1="{cat_y+37}" x2="{cat_x+98}" y2="{cat_y+34}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+84}" y1="{cat_y+42}" x2="{cat_x+97}" y2="{cat_y+43}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
+    # Paws on laptop
+    b += f'<rect x="{cat_x+25}" y="{cat_y+58}" width="50" height="12" rx="4" fill="#334155" stroke="{CYAN}" stroke-width="1.2"/>'
+    b += f'<rect x="{cat_x+35}" y="{cat_y+62}" width="30" height="4" rx="2" fill="{CYAN}"/>'
+    b += f'<ellipse cx="{cat_x+34}" cy="{cat_y+58}" rx="6" ry="4" fill="#1e293b" stroke="{CYAN}" stroke-width="1.2"/>'
+    b += f'<ellipse cx="{cat_x+66}" cy="{cat_y+58}" rx="6" ry="4" fill="#1e293b" stroke="{CYAN}" stroke-width="1.2"/>'
+    
+    # Business Card text info
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+148}" text-anchor="middle" font-family="{SANS}" font-size="15" font-weight="800" fill="{WHITE}">Diego Mantilla</text>'
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+168}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{CYAN}">Senior Cat Operator</text>'
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+188}" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{MUTED}">Always shipping clean code</text>'
+    
+    # Right Section: GitHub Commit Calendar Grid
+    gx, gy = 318, 24
+    gw, gh = 558, 212
+    b += f'<rect x="{gx}" y="{gy}" width="{gw}" height="{gh}" rx="16" fill="{BG}" stroke="{LINE}"/>'
+    
+    # Fetch real live contribution calendar from GitHub API
+    total_commits = 500
+    weeks_data = []
+    try:
+        query = 'query { viewer { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { contributionCount date weekday } } } } } }'
+        res = subprocess.check_output(['gh', 'api', 'graphql', '-f', f'query={query}'], text=True)
+        cdata = json.loads(res)['data']['viewer']['contributionsCollection']['contributionCalendar']
+        total_commits = cdata['totalContributions']
+        weeks_data = cdata['weeks']
+    except Exception as err:
+        pass
+        
+    b += f'<text x="{gx+20}" y="{gy+32}" font-family="{SANS}" font-size="16" font-weight="700" fill="{WHITE}">GitHub Activity</text>'
+    b += f'<text x="{gx+gw-20}" y="{gy+32}" text-anchor="end" font-family="{MONO}" font-size="12" fill="{GREEN}">⚡ {total_commits} contributions in the last year</text>'
+    
+    # Render commit graph grid (last 42 weeks to fit cleanly)
+    # 7 rows (weekdays), square size 9px, spacing 2.5px
+    disp_weeks = weeks_data[-42:] if len(weeks_data) >= 42 else weeks_data
+    start_grid_x = gx + 20
+    start_grid_y = gy + 52
+    sq = 9.5
+    gap = 3
+    
+    def get_color(cnt):
+        if cnt == 0: return "#161f30"
+        if cnt <= 2: return "#0e4429"
+        if cnt <= 5: return "#006d32"
+        if cnt <= 9: return "#26a641"
+        return "#39d353"
+        
+    for c_idx, w_obj in enumerate(disp_weeks):
+        col_x = start_grid_x + c_idx * (sq + gap)
+        for day in w_obj.get('contributionDays', []):
+            row_y = start_grid_y + day['weekday'] * (sq + gap)
+            color = get_color(day['contributionCount'])
+            b += f'<rect x="{col_x:.1f}" y="{row_y:.1f}" width="{sq}" height="{sq}" rx="2" fill="{color}"/>'
+            
+    # Legend below graph
+    b += f'<text x="{start_grid_x}" y="{gy+gh-22}" font-family="{MONO}" font-size="11" fill="{MUTED}">Less</text>'
+    for idx, col in enumerate(["#161f30", "#0e4429", "#006d32", "#26a641", "#39d353"]):
+        lx = start_grid_x + 38 + idx * 14
+        b += f'<rect x="{lx}" y="{gy+gh-30}" width="10" height="10" rx="2" fill="{col}"/>'
+    b += f'<text x="{start_grid_x+116}" y="{gy+gh-22}" font-family="{MONO}" font-size="11" fill="{MUTED}">More</text>'
+    b += f'<text x="{gx+gw-20}" y="{gy+gh-22}" text-anchor="end" font-family="{MONO}" font-size="11" fill="{CYAN}">github.com/DMntill4</text>'
+    
+    svg(w, h, b, "activity-card.svg")
+
+build_activity_card()
 print(sorted(os.listdir(OUT)))
