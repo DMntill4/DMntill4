@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 56" width="900" height="56" role="img">
 <defs>
-<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
-<linearGradient id="border-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".55"/><stop offset=".5" stop-color="#3b82f6" stop-opacity=".28"/><stop offset="1" stop-color="#6366f1" stop-opacity=".45"/></linearGradient>
-<linearGradient id="fadeline" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".8"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
-<radialGradient id="glow1" cx=".12" cy=".08" r=".7"><stop offset="0" stop-color="#38bdf8" stop-opacity=".16"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
-<radialGradient id="glow2" cx=".92" cy=".92" r=".65"><stop offset="0" stop-color="#3b82f6" stop-opacity=".18"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
-<radialGradient id="cat-glow" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#38bdf8" stop-opacity=".22"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+<linearGradient id="border-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset=".45" stop-color="#38bdf8" stop-opacity=".26"/><stop offset="1" stop-color="#3b82f6" stop-opacity=".14"/></linearGradient>
+<linearGradient id="glass-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fadeline" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".65"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow1" cx=".12" cy=".08" r=".72"><stop offset="0" stop-color="#38bdf8" stop-opacity=".12"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2" cx=".92" cy=".92" r=".65"><stop offset="0" stop-color="#3b82f6" stop-opacity=".14"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
+<radialGradient id="cat-glow" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#38bdf8" stop-opacity=".18"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
 <pattern id="dotgrid" width="20" height="20" patternUnits="userSpaceOnUse">
-  <circle cx="1.5" cy="1.5" r="0.9" fill="#38bdf8" fill-opacity="0.06"/>
+  <circle cx="1.5" cy="1.5" r="0.8" fill="#38bdf8" fill-opacity="0.045"/>
 </pattern>
 </defs>
-<rect x="1" y="1" width="898" height="54" rx="14" fill="#0b1120" stroke="#1b283f"/><rect x="12" y="11" width="34" height="34" rx="9" fill="url(#g)"/><text x="29" y="33" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Courier New',monospace" font-size="14" font-weight="700" fill="#060a13">03</text><text x="60" y="37" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="700" fill="#f8fafc">Activity &amp; Stats</text><line x1="340" y1="28" x2="880" y2="28" stroke="url(#fadeline)" stroke-width="2" stroke-linecap="round"/>
+<rect x="1" y="1" width="898" height="54" rx="0" fill="#0b1120" fill-opacity="0.9" stroke="url(#border-g)" stroke-width="1.2"/><rect x="12" y="11" width="34" height="34" rx="0" fill="url(#g)" fill-opacity="0.9"/><text x="29" y="33" text-anchor="middle" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="14" font-weight="700" fill="#060911">03</text><text x="60" y="37" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif" font-size="22" font-weight="700" fill="#f8fafc" letter-spacing="-0.3">Activity &amp; Stats</text><line x1="340" y1="28" x2="880" y2="28" stroke="url(#fadeline)" stroke-width="1.5"/>
 </svg>
