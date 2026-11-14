@@ -1,18 +1,24 @@
 import html, os
 OUT = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(OUT, exist_ok=True)
-BG, CARD, LINE = "#0d1117", "#111827", "#243044"
-BLUE, CYAN, VIOLET = "#4a90d9", "#22d3ee", "#8b5cf6"
-WHITE, MUTED, GREEN = "#f0f6fc", "#8b9bb4", "#7ee787"
+BG, CARD, LINE = "#070b14", "#0c1322", "#1e293b"
+BLUE, CYAN, VIOLET = "#3b82f6", "#06b6d4", "#6366f1"
+WHITE, MUTED, GREEN = "#f8fafc", "#94a3b8", "#34d399"
 SANS = "'Segoe UI','Helvetica Neue',Arial,sans-serif"
 MONO = "'SFMono-Regular',Consolas,'Courier New',monospace"
 e = html.escape
 
 DEFS = f'''<defs>
-<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{CYAN}"/><stop offset=".5" stop-color="{BLUE}"/><stop offset="1" stop-color="{VIOLET}"/></linearGradient>
-<linearGradient id="fadeline" x1="0" x2="1"><stop offset="0" stop-color="{BLUE}" stop-opacity=".8"/><stop offset="1" stop-color="{VIOLET}" stop-opacity="0"/></linearGradient>
-<radialGradient id="glow1" cx=".15" cy=".1" r=".7"><stop offset="0" stop-color="{BLUE}" stop-opacity=".30"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></radialGradient>
-<radialGradient id="glow2" cx=".95" cy=".95" r=".6"><stop offset="0" stop-color="{VIOLET}" stop-opacity=".28"/><stop offset="1" stop-color="{VIOLET}" stop-opacity="0"/></radialGradient>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+<linearGradient id="fadeline" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".85"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow1" cx=".15" cy=".1" r=".75"><stop offset="0" stop-color="#38bdf8" stop-opacity=".22"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2" cx=".92" cy=".92" r=".65"><stop offset="0" stop-color="#3b82f6" stop-opacity=".24"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
+<pattern id="dotgrid" width="22" height="22" patternUnits="userSpaceOnUse">
+  <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.09"/>
+</pattern>
+<pattern id="diag" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+  <line x1="0" y1="0" x2="0" y2="12" stroke="#38bdf8" stroke-opacity="0.04" stroke-width="1"/>
+</pattern>
 </defs>'''
 
 def svg(w, h, body, name):
@@ -21,6 +27,7 @@ def svg(w, h, body, name):
 
 def panel(w, h, rx=20, glow=True):
     s = f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="{rx}" fill="{CARD}" stroke="url(#g)" stroke-width="1.5"/>'
+    s += f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="{rx}" fill="url(#dotgrid)"/>'
     if glow:
         s += f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="{rx}" fill="url(#glow1)"/>'
         s += f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="{rx}" fill="url(#glow2)"/>'
@@ -145,45 +152,28 @@ def build_activity_card():
         b += f'<circle cx="{cx+18+i*16}" cy="{cy+16}" r="4.5" fill="{c}"/>'
     b += f'<text x="{cx+cw-14}" y="{cy+20}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}">dev_cat.id</text>'
     
-    # Cyberpunk / Dark aggressive cat (sleek silhouette, sharp ears, glowing narrow slanted eyes)
-    cat_x, cat_y = cx + 55, cy + 50
-    # Sharp sleek ears (dark with cyan edge)
-    b += f'<polygon points="{cat_x+6},{cat_y+26} {cat_x+22},{cat_y-2} {cat_x+36},{cat_y+16}" fill="#0f172a" stroke="{CYAN}" stroke-width="1.8"/>'
-    b += f'<polygon points="{cat_x+64},{cat_y+16} {cat_x+78},{cat_y-2} {cat_x+94},{cat_y+26}" fill="#0f172a" stroke="{CYAN}" stroke-width="1.8"/>'
-    # Inner ear accent lines
-    b += f'<line x1="{cat_x+18}" y1="{cat_y+6}" x2="{cat_x+24}" y2="{cat_y+18}" stroke="{BLUE}" stroke-width="1.4"/>'
-    b += f'<line x1="{cat_x+82}" y1="{cat_y+6}" x2="{cat_x+76}" y2="{cat_y+18}" stroke="{BLUE}" stroke-width="1.4"/>'
+    # Clean Modern Cat Silhouette (just ears + contour + aggressive glowing eyes)
+    # Centered at (cx + 135, cy + 88)
+    cat_cx, cat_cy = cx + 135, cy + 86
     
-    # Head (sleek dark silhouette)
-    b += f'<ellipse cx="{cat_x+50}" cy="{cat_y+36}" rx="42" ry="29" fill="#0b0f19" stroke="{CYAN}" stroke-width="2"/>'
-    
-    # Aggressive / Sharp slitted glowing eyes (fierce hunter / stealth coder look)
-    # Left eye: angled slanted sharp polygon
-    b += f'<polygon points="{cat_x+24},{cat_y+30} {cat_x+42},{cat_y+34} {cat_x+28},{cat_y+40}" fill="{CYAN}"/>'
-    b += f'<line x1="{cat_x+32}" y1="{cat_y+31}" x2="{cat_x+34}" y2="{cat_y+39}" stroke="#0b0f19" stroke-width="2.2" stroke-linecap="round"/>'
-    # Right eye: mirrored angled slanted sharp polygon
-    b += f'<polygon points="{cat_x+76},{cat_y+30} {cat_x+58},{cat_y+34} {cat_x+72},{cat_y+40}" fill="{CYAN}"/>'
-    b += f'<line x1="{cat_x+68}" y1="{cat_y+31}" x2="{cat_x+66}" y2="{cat_y+39}" stroke="#0b0f19" stroke-width="2.2" stroke-linecap="round"/>'
-    
-    # Subtle fierce nose & smirk / stealth fangs
-    b += f'<polygon points="{cat_x+48},{cat_y+40} {cat_x+52},{cat_y+40} {cat_x+50},{cat_y+43}" fill="{MUTED}"/>'
-    b += f'<path d="M{cat_x+43} {cat_y+46} L{cat_x+50} {cat_y+44} L{cat_x+57} {cat_y+46}" fill="none" stroke="{MUTED}" stroke-width="1.6" stroke-linecap="round"/>'
-    
-    # Whiskers (straight, sharp, stealth)
-    b += f'<line x1="{cat_x+16}" y1="{cat_y+38}" x2="{cat_x-2}" y2="{cat_y+35}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+16}" y1="{cat_y+43}" x2="{cat_x-1}" y2="{cat_y+45}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+84}" y1="{cat_y+38}" x2="{cat_x+102}" y2="{cat_y+35}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+84}" y1="{cat_y+43}" x2="{cat_x+101}" y2="{cat_y+45}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
-    
-    # Sharp sleek paws on terminal keyboard
-    b += f'<rect x="{cat_x+22}" y="{cat_y+58}" width="56" height="13" rx="4" fill="#161f30" stroke="{CYAN}" stroke-width="1.4"/>'
-    b += f'<line x1="{cat_x+30}" y1="{cat_y+64}" x2="{cat_x+70}" y2="{cat_y+64}" stroke="{CYAN}" stroke-width="2" stroke-linecap="round"/>'
-    b += f'<ellipse cx="{cat_x+32}" cy="{cat_y+58}" rx="7" ry="4.5" fill="#0f172a" stroke="{CYAN}" stroke-width="1.2"/>'
-    b += f'<ellipse cx="{cat_x+68}" cy="{cat_y+58}" rx="7" ry="4.5" fill="#0f172a" stroke="{CYAN}" stroke-width="1.2"/>'
+    # Sleek minimal cat head silhouette (single continuous path matching reference shape)
+    b += f'''<path d="M {cat_cx-32} {cat_cy-6}
+                     C {cat_cx-31} {cat_cy-22}, {cat_cx-26} {cat_cy-35}, {cat_cx-22} {cat_cy-39}
+                     C {cat_cx-20} {cat_cy-41}, {cat_cx-12} {cat_cy-32}, {cat_cx-8} {cat_cy-26}
+                     C {cat_cx-3} {cat_cy-28}, {cat_cx+3} {cat_cy-28}, {cat_cx+8} {cat_cy-26}
+                     C {cat_cx+12} {cat_cy-32}, {cat_cx+20} {cat_cy-41}, {cat_cx+22} {cat_cy-39}
+                     C {cat_cx+26} {cat_cy-35}, {cat_cx+31} {cat_cy-22}, {cat_cx+32} {cat_cy-6}
+                     C {cat_cx+34} {cat_cy+14}, {cat_cx+18} {cat_cy+26}, {cat_cx} {cat_cy+26}
+                     C {cat_cx-18} {cat_cy+26}, {cat_cx-34} {cat_cy+14}, {cat_cx-32} {cat_cy-6} Z"
+                  fill="#060911" stroke="url(#g)" stroke-width="2.2"/>'''
+                  
+    # Sharp aggressive slanted eyes inside the silhouette
+    b += f'<polygon points="{cat_cx-20},{cat_cy-6} {cat_cx-6},{cat_cy-1} {cat_cx-16},{cat_cy+4}" fill="#38bdf8"/>'
+    b += f'<polygon points="{cat_cx+20},{cat_cy-6} {cat_cx+6},{cat_cy-1} {cat_cx+16},{cat_cy+4}" fill="#38bdf8"/>'
     
     # Business Card text info
     b += f'<text x="{cx+cw/2:.0f}" y="{cy+148}" text-anchor="middle" font-family="{SANS}" font-size="15" font-weight="800" fill="{WHITE}">Diego Mantilla</text>'
-    b += f'<text x="{cx+cw/2:.0f}" y="{cy+168}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{CYAN}">Core Software Engineer</text>'
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+168}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="#38bdf8">Core Software Engineer</text>'
     b += f'<text x="{cx+cw/2:.0f}" y="{cy+188}" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{MUTED}">Clean code · Zero bloat</text>'
     
     # Right Section: GitHub Commit Calendar Grid
