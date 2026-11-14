@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://portfolio-seven-indol-40.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-4a90d9?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117"/></a>
-  <a href="https://www.linkedin.com/in/diego-mantilla-156928419/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"/></a>
+  <a href="https://www.linkedin.com/in/diego-alejandro-panqueba-mantilla-156928419/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"/></a>
   <a href="https://discord.com/users/dieg.0m"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d1117"/></a>
 </div>
 
@@ -53,10 +53,10 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <img src="./assets/profile/section-contact.svg?v=5" width="100%" alt="Contact">
 
-<a href="https://www.linkedin.com/in/diego-mantilla-156928419/"><img src="./assets/profile/contact.svg?v=5" width="100%" alt="Have an idea? Let's talk. Open to junior software engineer roles and collaborations."></a>
+<a href="https://www.linkedin.com/in/diego-alejandro-panqueba-mantilla-156928419/"><img src="./assets/profile/contact.svg?v=5" width="100%" alt="Have an idea? Let's talk. Open to junior software engineer roles and collaborations."></a>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/diego-mantilla-156928419/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"/></a>
+  <a href="https://www.linkedin.com/in/diego-alejandro-panqueba-mantilla-156928419/"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"/></a>
   <a href="https://discord.com/users/dieg.0m"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d1117"/></a>
   <a href="https://portfolio-seven-indol-40.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-4a90d9?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117"/></a>
 </div>
