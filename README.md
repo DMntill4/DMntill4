@@ -21,7 +21,7 @@ Based in Floridablanca, Colombia · English and Spanish
   </tr>
   <tr>
     <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
-    <td width="50%"><a href="https://portfolio-seven-indol-40.vercel.app/"><img src="./assets/profile/project-portfolio.svg" width="100%" alt="Portfolio: responsive personal site built with React and deployed on Vercel."></a></td>
+    <td width="50%"><img src="./assets/profile/project-restora.svg" width="100%" alt="Restora: Multi-tenant SaaS platform for restaurant operations with FEFO inventory and AI OCR. (Private / Soon)"></td>
   </tr>
 </table>
 
