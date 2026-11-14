@@ -145,40 +145,46 @@ def build_activity_card():
         b += f'<circle cx="{cx+18+i*16}" cy="{cy+16}" r="4.5" fill="{c}"/>'
     b += f'<text x="{cx+cw-14}" y="{cy+20}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}">dev_cat.id</text>'
     
-    # Cute Programmer Cat SVG illustration (centered in card)
-    # Cat face / ears / blushing / laptop
+    # Cyberpunk / Dark aggressive cat (sleek silhouette, sharp ears, glowing narrow slanted eyes)
     cat_x, cat_y = cx + 55, cy + 50
-    # Ears
-    b += f'<polygon points="{cat_x+10},{cat_y+22} {cat_x+24},{cat_y+2} {cat_x+34},{cat_y+20}" fill="#334155" stroke="{CYAN}" stroke-width="1.5"/>'
-    b += f'<polygon points="{cat_x+14},{cat_y+20} {cat_x+24},{cat_y+8} {cat_x+30},{cat_y+18}" fill="#f472b6" opacity="0.6"/>'
-    b += f'<polygon points="{cat_x+66},{cat_y+20} {cat_x+76},{cat_y+2} {cat_x+90},{cat_y+22}" fill="#334155" stroke="{CYAN}" stroke-width="1.5"/>'
-    b += f'<polygon points="{cat_x+70},{cat_y+18} {cat_x+76},{cat_y+8} {cat_x+86},{cat_y+20}" fill="#f472b6" opacity="0.6"/>'
-    # Head
-    b += f'<ellipse cx="{cat_x+50}" cy="{cat_y+36}" rx="38" ry="28" fill="#1e293b" stroke="{CYAN}" stroke-width="1.8"/>'
-    # Eyes (happy / anime coder eyes ^^)
-    b += f'<path d="M{cat_x+32} {cat_y+34} Q{cat_x+38} {cat_y+28} {cat_x+44} {cat_y+34}" fill="none" stroke="{WHITE}" stroke-width="2.5" stroke-linecap="round"/>'
-    b += f'<path d="M{cat_x+56} {cat_y+34} Q{cat_x+62} {cat_y+28} {cat_x+68} {cat_y+34}" fill="none" stroke="{WHITE}" stroke-width="2.5" stroke-linecap="round"/>'
-    # Cute Blushing cheeks
-    b += f'<circle cx="{cat_x+28}" cy="{cat_y+40}" r="4" fill="#f43f5e" opacity="0.5"/>'
-    b += f'<circle cx="{cat_x+72}" cy="{cat_y+40}" r="4" fill="#f43f5e" opacity="0.5"/>'
-    # Snout & Mouth :3
-    b += f'<polygon points="{cat_x+48},{cat_y+37} {cat_x+52},{cat_y+37} {cat_x+50},{cat_y+40}" fill="#f472b6"/>'
-    b += f'<path d="M{cat_x+44} {cat_y+41} Q{cat_x+48} {cat_y+46} {cat_x+50} {cat_y+41} Q{cat_x+52} {cat_y+46} {cat_x+56} {cat_y+41}" fill="none" stroke="{WHITE}" stroke-width="1.6" stroke-linecap="round"/>'
-    # Whiskers
-    b += f'<line x1="{cat_x+16}" y1="{cat_y+37}" x2="{cat_x+2}" y2="{cat_y+34}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+16}" y1="{cat_y+42}" x2="{cat_x+3}" y2="{cat_y+43}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+84}" y1="{cat_y+37}" x2="{cat_x+98}" y2="{cat_y+34}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
-    b += f'<line x1="{cat_x+84}" y1="{cat_y+42}" x2="{cat_x+97}" y2="{cat_y+43}" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round"/>'
-    # Paws on laptop
-    b += f'<rect x="{cat_x+25}" y="{cat_y+58}" width="50" height="12" rx="4" fill="#334155" stroke="{CYAN}" stroke-width="1.2"/>'
-    b += f'<rect x="{cat_x+35}" y="{cat_y+62}" width="30" height="4" rx="2" fill="{CYAN}"/>'
-    b += f'<ellipse cx="{cat_x+34}" cy="{cat_y+58}" rx="6" ry="4" fill="#1e293b" stroke="{CYAN}" stroke-width="1.2"/>'
-    b += f'<ellipse cx="{cat_x+66}" cy="{cat_y+58}" rx="6" ry="4" fill="#1e293b" stroke="{CYAN}" stroke-width="1.2"/>'
+    # Sharp sleek ears (dark with cyan edge)
+    b += f'<polygon points="{cat_x+6},{cat_y+26} {cat_x+22},{cat_y-2} {cat_x+36},{cat_y+16}" fill="#0f172a" stroke="{CYAN}" stroke-width="1.8"/>'
+    b += f'<polygon points="{cat_x+64},{cat_y+16} {cat_x+78},{cat_y-2} {cat_x+94},{cat_y+26}" fill="#0f172a" stroke="{CYAN}" stroke-width="1.8"/>'
+    # Inner ear accent lines
+    b += f'<line x1="{cat_x+18}" y1="{cat_y+6}" x2="{cat_x+24}" y2="{cat_y+18}" stroke="{BLUE}" stroke-width="1.4"/>'
+    b += f'<line x1="{cat_x+82}" y1="{cat_y+6}" x2="{cat_x+76}" y2="{cat_y+18}" stroke="{BLUE}" stroke-width="1.4"/>'
+    
+    # Head (sleek dark silhouette)
+    b += f'<ellipse cx="{cat_x+50}" cy="{cat_y+36}" rx="42" ry="29" fill="#0b0f19" stroke="{CYAN}" stroke-width="2"/>'
+    
+    # Aggressive / Sharp slitted glowing eyes (fierce hunter / stealth coder look)
+    # Left eye: angled slanted sharp polygon
+    b += f'<polygon points="{cat_x+24},{cat_y+30} {cat_x+42},{cat_y+34} {cat_x+28},{cat_y+40}" fill="{CYAN}"/>'
+    b += f'<line x1="{cat_x+32}" y1="{cat_y+31}" x2="{cat_x+34}" y2="{cat_y+39}" stroke="#0b0f19" stroke-width="2.2" stroke-linecap="round"/>'
+    # Right eye: mirrored angled slanted sharp polygon
+    b += f'<polygon points="{cat_x+76},{cat_y+30} {cat_x+58},{cat_y+34} {cat_x+72},{cat_y+40}" fill="{CYAN}"/>'
+    b += f'<line x1="{cat_x+68}" y1="{cat_y+31}" x2="{cat_x+66}" y2="{cat_y+39}" stroke="#0b0f19" stroke-width="2.2" stroke-linecap="round"/>'
+    
+    # Subtle fierce nose & smirk / stealth fangs
+    b += f'<polygon points="{cat_x+48},{cat_y+40} {cat_x+52},{cat_y+40} {cat_x+50},{cat_y+43}" fill="{MUTED}"/>'
+    b += f'<path d="M{cat_x+43} {cat_y+46} L{cat_x+50} {cat_y+44} L{cat_x+57} {cat_y+46}" fill="none" stroke="{MUTED}" stroke-width="1.6" stroke-linecap="round"/>'
+    
+    # Whiskers (straight, sharp, stealth)
+    b += f'<line x1="{cat_x+16}" y1="{cat_y+38}" x2="{cat_x-2}" y2="{cat_y+35}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+16}" y1="{cat_y+43}" x2="{cat_x-1}" y2="{cat_y+45}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+84}" y1="{cat_y+38}" x2="{cat_x+102}" y2="{cat_y+35}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
+    b += f'<line x1="{cat_x+84}" y1="{cat_y+43}" x2="{cat_x+101}" y2="{cat_y+45}" stroke="{CYAN}" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round"/>'
+    
+    # Sharp sleek paws on terminal keyboard
+    b += f'<rect x="{cat_x+22}" y="{cat_y+58}" width="56" height="13" rx="4" fill="#161f30" stroke="{CYAN}" stroke-width="1.4"/>'
+    b += f'<line x1="{cat_x+30}" y1="{cat_y+64}" x2="{cat_x+70}" y2="{cat_y+64}" stroke="{CYAN}" stroke-width="2" stroke-linecap="round"/>'
+    b += f'<ellipse cx="{cat_x+32}" cy="{cat_y+58}" rx="7" ry="4.5" fill="#0f172a" stroke="{CYAN}" stroke-width="1.2"/>'
+    b += f'<ellipse cx="{cat_x+68}" cy="{cat_y+58}" rx="7" ry="4.5" fill="#0f172a" stroke="{CYAN}" stroke-width="1.2"/>'
     
     # Business Card text info
     b += f'<text x="{cx+cw/2:.0f}" y="{cy+148}" text-anchor="middle" font-family="{SANS}" font-size="15" font-weight="800" fill="{WHITE}">Diego Mantilla</text>'
-    b += f'<text x="{cx+cw/2:.0f}" y="{cy+168}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{CYAN}">Senior Cat Operator</text>'
-    b += f'<text x="{cx+cw/2:.0f}" y="{cy+188}" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{MUTED}">Always shipping clean code</text>'
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+168}" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{CYAN}">Core Software Engineer</text>'
+    b += f'<text x="{cx+cw/2:.0f}" y="{cy+188}" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{MUTED}">Clean code · Zero bloat</text>'
     
     # Right Section: GitHub Commit Calendar Grid
     gx, gy = 318, 24
