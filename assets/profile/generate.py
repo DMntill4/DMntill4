@@ -280,4 +280,111 @@ def build_activity_card():
     svg(w, h, b, "activity-card.svg", act_style)
 
 build_activity_card()
+
+# ---------------- MINI-GAME: CAT VS BUGS (APPLE GLASS RUNNER) ----------------
+def build_cat_runner():
+    w, h = 900, 148
+    b = panel(w, h, 0)
+    
+    # Clipping region inside the panel so moving bugs/ground stay cleanly bounded
+    b += '<defs><clipPath id="arena-clip"><rect x="2" y="2" width="896" height="144"/></clipPath></defs>'
+    
+    runner_style = """
+    @keyframes groundScroll {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-180px); }
+    }
+    @keyframes bgParallax {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-300px); }
+    }
+    @keyframes catJump {
+      0%, 8% { transform: translateY(0px) rotate(0deg); }
+      14% { transform: translateY(-42px) rotate(-5deg); }
+      17% { transform: translateY(-46px) rotate(0deg); }
+      26%, 58% { transform: translateY(0px) rotate(0deg); }
+      64% { transform: translateY(-42px) rotate(-5deg); }
+      67% { transform: translateY(-46px) rotate(0deg); }
+      76%, 100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes bugScroll {
+      0% { transform: translateX(920px); }
+      100% { transform: translateX(-280px); }
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 1; }
+    }
+    .ground-track { animation: groundScroll 1.2s linear infinite; }
+    .bg-code { animation: bgParallax 12s linear infinite; }
+    .runner-cat { animation: catJump 4.8s cubic-bezier(0.35, 0, 0.25, 1) infinite; transform-origin: 120px 100px; }
+    .obs-1 { animation: bugScroll 4.8s linear infinite; }
+    .obs-2 { animation: bugScroll 4.8s linear -2.4s infinite; }
+    .live-dot { animation: pulseDot 1.6s ease-in-out infinite; }
+    """
+    
+    # Top HUD bar
+    b += f'<text x="20" y="24" font-family="{MONO}" font-size="11" fill="{CYAN}" letter-spacing="1.2">cat_runner.sh</text>'
+    b += f'<circle class="live-dot" cx="716" cy="20" r="3.2" fill="{GREEN}"/>'
+    b += f'<text x="726" y="24" font-family="{MONO}" font-size="10.5" fill="{MUTED}" letter-spacing="0.8">DODGING BUGS · HI 99999</text>'
+    
+    b += '<g clip-path="url(#arena-clip)">'
+    
+    # Subtle parallax code tokens in background
+    b += '<g class="bg-code" opacity="0.16">'
+    for idx, tok in enumerate(["{ }", "0x1A", "</>", "git push", "=>", "200 OK", "async"]):
+        tx = 80 + idx * 165
+        ty = 48 + (idx % 2) * 16
+        b += f'<text x="{tx}" y="{ty}" font-family="{MONO}" font-size="11" fill="{CYAN}">{tok}</text>'
+    b += '</g>'
+    
+    # Ground line & scrolling ticks
+    gy = 118
+    b += f'<line x1="2" y1="{gy}" x2="{w-2}" y2="{gy}" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>'
+    b += '<g class="ground-track">'
+    for tx in range(0, 1140, 36):
+        b += f'<line x1="{tx}" y1="{gy+6}" x2="{tx+14}" y2="{gy+6}" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/>'
+        if tx % 72 == 0:
+            b += f'<line x1="{tx+18}" y1="{gy+12}" x2="{tx+24}" y2="{gy+12}" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/>'
+    b += '</g>'
+    
+    # Runner Cat (Sleek minimalist cat at x=120, resting on ground y=118)
+    cat_cx, cat_cy = 120, 96
+    b += '<g class="runner-cat">'
+    b += f'<circle cx="{cat_cx}" cy="{cat_cy}" r="26" fill="url(#cat-glow)"/>'
+    b += f'''<path d="M {cat_cx-18} {cat_cy-3}
+                     C {cat_cx-17} {cat_cy-12}, {cat_cx-14} {cat_cy-20}, {cat_cx-11} {cat_cy-22}
+                     C {cat_cx-10} {cat_cy-23}, {cat_cx-6} {cat_cy-17}, {cat_cx-4} {cat_cy-14}
+                     C {cat_cx-1} {cat_cy-15}, {cat_cx+1} {cat_cy-15}, {cat_cx+4} {cat_cy-14}
+                     C {cat_cx+6} {cat_cy-17}, {cat_cx+10} {cat_cy-23}, {cat_cx+11} {cat_cy-22}
+                     C {cat_cx+14} {cat_cy-20}, {cat_cx+17} {cat_cy-12}, {cat_cx+18} {cat_cy-3}
+                     C {cat_cx+19} {cat_cy+8}, {cat_cx+10} {cat_cy+15}, {cat_cx} {cat_cy+15}
+                     C {cat_cx-10} {cat_cy+15}, {cat_cx-19} {cat_cy+8}, {cat_cx-18} {cat_cy-3} Z"
+                  fill="#050810" stroke="url(#border-g)" stroke-width="1.3"/>'''
+    # Whiskers
+    b += f'<line x1="{cat_cx-16}" y1="{cat_cy+2}" x2="{cat_cx-26}" y2="{cat_cy}" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/>'
+    b += f'<line x1="{cat_cx-16}" y1="{cat_cy+6}" x2="{cat_cx-26}" y2="{cat_cy+7}" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/>'
+    b += f'<line x1="{cat_cx+16}" y1="{cat_cy+2}" x2="{cat_cx+26}" y2="{cat_cy}" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/>'
+    b += f'<line x1="{cat_cx+16}" y1="{cat_cy+6}" x2="{cat_cx+26}" y2="{cat_cy+7}" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/>'
+    # Sharp aggressive eyes
+    b += f'<polygon points="{cat_cx-11},{cat_cy-4} {cat_cx-3},{cat_cy-1} {cat_cx-8},{cat_cy+2}" fill="#38bdf8"/>'
+    b += f'<polygon points="{cat_cx+11},{cat_cy-4} {cat_cx+3},{cat_cy-1} {cat_cx+8},{cat_cy+2}" fill="#38bdf8"/>'
+    b += '</g>'
+    
+    # Obstacle 1: BUG block
+    b += '<g class="obs-1">'
+    b += f'<rect x="0" y="{gy-26}" width="38" height="26" rx="0" fill="#ef4444" fill-opacity="0.16" stroke="#ef4444" stroke-opacity="0.65" stroke-width="1.2"/>'
+    b += f'<text x="19" y="{gy-9}" text-anchor="middle" font-family="{MONO}" font-size="10.5" font-weight="700" fill="#fca5a5">BUG</text>'
+    b += '</g>'
+    
+    # Obstacle 2: 404 block
+    b += '<g class="obs-2">'
+    b += f'<rect x="0" y="{gy-24}" width="42" height="24" rx="0" fill="#8b5cf6" fill-opacity="0.16" stroke="#a855f7" stroke-opacity="0.65" stroke-width="1.2"/>'
+    b += f'<text x="21" y="{gy-8}" text-anchor="middle" font-family="{MONO}" font-size="10.5" font-weight="700" fill="#d8b4fe">404</text>'
+    b += '</g>'
+    
+    b += '</g>'
+    svg(w, h, b, "cat-vs-bugs.svg", runner_style)
+
+build_cat_runner()
 print(sorted(os.listdir(OUT)))

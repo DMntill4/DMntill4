@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 148" width="900" height="148" role="img">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+<linearGradient id="border-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset=".45" stop-color="#38bdf8" stop-opacity=".26"/><stop offset="1" stop-color="#3b82f6" stop-opacity=".14"/></linearGradient>
+<linearGradient id="glass-top" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fadeline" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".65"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+<radialGradient id="glow1" cx=".12" cy=".08" r=".72"><stop offset="0" stop-color="#38bdf8" stop-opacity=".12"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2" cx=".92" cy=".92" r=".65"><stop offset="0" stop-color="#3b82f6" stop-opacity=".14"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
+<radialGradient id="cat-glow" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#38bdf8" stop-opacity=".18"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+<pattern id="dotgrid" width="20" height="20" patternUnits="userSpaceOnUse">
+  <circle cx="1.5" cy="1.5" r="0.8" fill="#38bdf8" fill-opacity="0.045"/>
+</pattern>
+</defs>
+<style>
+
+    @keyframes groundScroll {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-180px); }
+    }
+    @keyframes bgParallax {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-300px); }
+    }
+    @keyframes catJump {
+      0%, 8% { transform: translateY(0px) rotate(0deg); }
+      14% { transform: translateY(-42px) rotate(-5deg); }
+      17% { transform: translateY(-46px) rotate(0deg); }
+      26%, 58% { transform: translateY(0px) rotate(0deg); }
+      64% { transform: translateY(-42px) rotate(-5deg); }
+      67% { transform: translateY(-46px) rotate(0deg); }
+      76%, 100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes bugScroll {
+      0% { transform: translateX(920px); }
+      100% { transform: translateX(-280px); }
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 1; }
+    }
+    .ground-track { animation: groundScroll 1.2s linear infinite; }
+    .bg-code { animation: bgParallax 12s linear infinite; }
+    .runner-cat { animation: catJump 4.8s cubic-bezier(0.35, 0, 0.25, 1) infinite; transform-origin: 120px 100px; }
+    .obs-1 { animation: bugScroll 4.8s linear infinite; }
+    .obs-2 { animation: bugScroll 4.8s linear -2.4s infinite; }
+    .live-dot { animation: pulseDot 1.6s ease-in-out infinite; }
+    
+</style>
+<rect x="1" y="1" width="898" height="146" rx="0" fill="#0b1120" fill-opacity="0.92" stroke="url(#border-g)" stroke-width="1.2"/><rect x="1" y="1" width="898" height="146" rx="0" fill="url(#dotgrid)"/><rect x="1" y="1" width="898" height="146" rx="0" fill="url(#glow1)"/><rect x="1" y="1" width="898" height="146" rx="0" fill="url(#glow2)"/><line x1="2" y1="2" x2="898" y2="2" stroke="url(#glass-top)" stroke-width="1.2"/><defs><clipPath id="arena-clip"><rect x="2" y="2" width="896" height="144"/></clipPath></defs><text x="20" y="24" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8" letter-spacing="1.2">cat_runner.sh</text><circle class="live-dot" cx="716" cy="20" r="3.2" fill="#34d399"/><text x="726" y="24" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="10.5" fill="#94a3b8" letter-spacing="0.8">DODGING BUGS · HI 99999</text><g clip-path="url(#arena-clip)"><g class="bg-code" opacity="0.16"><text x="80" y="48" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">{ }</text><text x="245" y="64" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">0x1A</text><text x="410" y="48" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8"></></text><text x="575" y="64" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">git push</text><text x="740" y="48" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">=></text><text x="905" y="64" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">200 OK</text><text x="1070" y="48" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="11" fill="#38bdf8">async</text></g><line x1="2" y1="118" x2="898" y2="118" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/><g class="ground-track"><line x1="0" y1="124" x2="14" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="18" y1="130" x2="24" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="36" y1="124" x2="50" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="72" y1="124" x2="86" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="90" y1="130" x2="96" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="108" y1="124" x2="122" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="144" y1="124" x2="158" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="162" y1="130" x2="168" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="180" y1="124" x2="194" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="216" y1="124" x2="230" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="234" y1="130" x2="240" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="252" y1="124" x2="266" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="288" y1="124" x2="302" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="306" y1="130" x2="312" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="324" y1="124" x2="338" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="360" y1="124" x2="374" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="378" y1="130" x2="384" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="396" y1="124" x2="410" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="432" y1="124" x2="446" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="450" y1="130" x2="456" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="468" y1="124" x2="482" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="504" y1="124" x2="518" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="522" y1="130" x2="528" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="540" y1="124" x2="554" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="576" y1="124" x2="590" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="594" y1="130" x2="600" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="612" y1="124" x2="626" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="648" y1="124" x2="662" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="666" y1="130" x2="672" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="684" y1="124" x2="698" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="720" y1="124" x2="734" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="738" y1="130" x2="744" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="756" y1="124" x2="770" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="792" y1="124" x2="806" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="810" y1="130" x2="816" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="828" y1="124" x2="842" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="864" y1="124" x2="878" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="882" y1="130" x2="888" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="900" y1="124" x2="914" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="936" y1="124" x2="950" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="954" y1="130" x2="960" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="972" y1="124" x2="986" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1008" y1="124" x2="1022" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1026" y1="130" x2="1032" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1044" y1="124" x2="1058" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1080" y1="124" x2="1094" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1098" y1="130" x2="1104" y2="130" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1.2"/><line x1="1116" y1="124" x2="1130" y2="124" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2"/></g><g class="runner-cat"><circle cx="120" cy="96" r="26" fill="url(#cat-glow)"/><path d="M 102 93
+                     C 103 84, 106 76, 109 74
+                     C 110 73, 114 79, 116 82
+                     C 119 81, 121 81, 124 82
+                     C 126 79, 130 73, 131 74
+                     C 134 76, 137 84, 138 93
+                     C 139 104, 130 111, 120 111
+                     C 110 111, 101 104, 102 93 Z"
+                  fill="#050810" stroke="url(#border-g)" stroke-width="1.3"/><line x1="104" y1="98" x2="94" y2="96" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/><line x1="104" y1="102" x2="94" y2="103" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/><line x1="136" y1="98" x2="146" y2="96" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/><line x1="136" y1="102" x2="146" y2="103" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.3"/><polygon points="109,92 117,95 112,98" fill="#38bdf8"/><polygon points="131,92 123,95 128,98" fill="#38bdf8"/></g><g class="obs-1"><rect x="0" y="92" width="38" height="26" rx="0" fill="#ef4444" fill-opacity="0.16" stroke="#ef4444" stroke-opacity="0.65" stroke-width="1.2"/><text x="19" y="109" text-anchor="middle" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" fill="#fca5a5">BUG</text></g><g class="obs-2"><rect x="0" y="94" width="42" height="24" rx="0" fill="#8b5cf6" fill-opacity="0.16" stroke="#a855f7" stroke-opacity="0.65" stroke-width="1.2"/><text x="21" y="110" text-anchor="middle" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" fill="#d8b4fe">404</text></g></g>
+</svg>
