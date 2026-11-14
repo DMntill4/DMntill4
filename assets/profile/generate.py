@@ -54,7 +54,7 @@ b += f'<text x="48" y="62" font-family="{MONO}" font-size="13" fill="{CYAN}" let
 b += f'<text x="46" y="132" font-family="{SANS}" font-size="58" font-weight="800" fill="{WHITE}">Diego Mantilla</text>'
 b += f'<text x="48" y="172" font-family="{SANS}" font-size="22" font-weight="600" fill="url(#g)">Junior Software Engineer</text>'
 b += f'<text x="48" y="204" font-family="{SANS}" font-size="16" fill="{MUTED}">I build SaaS products with AI built in.</text>'
-b += pills(48, 232, ["React", "Python", "MySQL", "Docker"])
+b += pills(48, 232, ["Java 21", "TypeScript", "Python", "Docker"])
 # code panel
 px, py, pw, ph = 548, 44, 310, 212
 b += f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="0" fill="{BG}" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.14"/>'
@@ -72,7 +72,7 @@ lines = [
     (0, [("const ", VIOLET), ("diego ", WHITE), ("= {", WHITE)]),
     (2, [("role", BLUE), (": ", WHITE), ('"Junior Engineer"', GREEN), (",", WHITE)]),
     (2, [("focus", BLUE), (": ", WHITE), ('["SaaS", "AI"]', GREEN), (",", WHITE)]),
-    (2, [("stack", BLUE), (": ", WHITE), ('["React", "Python"]', GREEN), (",", WHITE)]),
+    (2, [("stack", BLUE), (": ", WHITE), ('["Java", "TS", "Python"]', GREEN), (",", WHITE)]),
     (2, [("location", BLUE), (": ", WHITE), ('"Colombia"', GREEN), (",", WHITE)]),
     (2, [("openToWork", BLUE), (": ", WHITE), ("true", CYAN), (",", WHITE)]),
     (0, [("};", WHITE)]),
