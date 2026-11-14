@@ -17,10 +17,10 @@ Based in Floridablanca, Colombia · English and Spanish
 <table>
   <tr>
     <td width="50%"><a href="https://github.com/DMntill4/ai-back-office"><img src="./assets/profile/project-ai-back-office.svg" width="100%" alt="AI Back Office: Autonomous ReAct agent for procurement and logistics with Grok xAI and Supabase."></a></td>
-    <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/SICA"><img src="./assets/profile/project-sica.svg" width="100%" alt="SICA: Integrated Access Control System with Hexagonal Architecture and 128D Facial Biometrics AI."></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/DMntill4/Proyecto_DeliveryBot_MantillaDiego"><img src="./assets/profile/project-deliverybot.svg" width="100%" alt="DeliveryBot: cafeteria ordering over Telegram with an n8n workflow and Google Sheets."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
     <td width="50%"><a href="https://portfolio-seven-indol-40.vercel.app/"><img src="./assets/profile/project-portfolio.svg" width="100%" alt="Portfolio: responsive personal site built with React and deployed on Vercel."></a></td>
   </tr>
 </table>

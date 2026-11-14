@@ -103,8 +103,8 @@ def project(name, glyph, title, l1, l2, tech, status, dot):
     svg(w, h, b, f"project-{name}.svg")
 
 project("ai-back-office", "AI", "AI Back Office", "Autonomous ReAct agent for procurement & logistics", "with Grok xAI, Supabase PG & Drizzle ORM.", ["Grok", "TypeScript", "PostgreSQL", "Fastify"], "AGENT", CYAN)
-project("opus-rentals", "SaaS", "Opus Rentals", "Full-stack rental platform: Spring Boot 3, DDD,", "4NF relational DB and responsive web client.", ["Java 21", "Spring Boot", "MySQL", "Docker"], "ENTERPRISE", GREEN)
-project("deliverybot", "</>", "DeliveryBot", "Cafeteria ordering over Telegram, run by an n8n", "workflow and logged in Google Sheets.", ["n8n", "Telegram", "Sheets"], "WORKFLOW", "#febc2e")
+project("sica", "BIO", "SICA: Access Control", "Hexagonal Java 21 architecture + 128D facial AI", "biometrics, web self-service & Swing GUI.", ["Java 21", "Computer Vision", "JWT", "MySQL"], "ENTERPRISE", GREEN)
+project("opus-rentals", "SaaS", "Opus Rentals", "Full-stack rental platform: Spring Boot 3, DDD,", "4NF relational DB and responsive web client.", ["Java 21", "Spring Boot", "MySQL", "Docker"], "ENTERPRISE", "#febc2e")
 project("portfolio", "{ }", "Portfolio", "Responsive personal site with my work,", "built with React and deployed on Vercel.", ["React", "Vite", "Tailwind"], "LIVE", BLUE)
 
 # ---------------- CONTACT ----------------
