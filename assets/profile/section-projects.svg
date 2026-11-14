@@ -10,6 +10,7 @@
 <pattern id="dotgrid" width="20" height="20" patternUnits="userSpaceOnUse">
   <circle cx="1.5" cy="1.5" r="0.8" fill="#38bdf8" fill-opacity="0.045"/>
 </pattern>
+<clipPath id="arena-clip"><rect x="2" y="2" width="896" height="144"/></clipPath>
 </defs>
 <rect x="1" y="1" width="898" height="54" rx="0" fill="#0b1120" fill-opacity="0.9" stroke="url(#border-g)" stroke-width="1.2"/><rect x="12" y="11" width="34" height="34" rx="0" fill="url(#g)" fill-opacity="0.9"/><text x="29" y="33" text-anchor="middle" font-family="'SF Mono','SFMono-Regular',Consolas,'Courier New',monospace" font-size="14" font-weight="700" fill="#060911">01</text><text x="60" y="37" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif" font-size="22" font-weight="700" fill="#f8fafc" letter-spacing="-0.3">Projects</text><line x1="220" y1="28" x2="880" y2="28" stroke="url(#fadeline)" stroke-width="1.5"/>
 </svg>

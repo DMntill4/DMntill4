@@ -19,6 +19,7 @@ DEFS = f'''<defs>
 <pattern id="dotgrid" width="20" height="20" patternUnits="userSpaceOnUse">
   <circle cx="1.5" cy="1.5" r="0.8" fill="#38bdf8" fill-opacity="0.045"/>
 </pattern>
+<clipPath id="arena-clip"><rect x="2" y="2" width="896" height="144"/></clipPath>
 </defs>'''
 
 def svg(w, h, body, name, style=""):
@@ -286,9 +287,6 @@ def build_cat_runner():
     w, h = 900, 148
     b = panel(w, h, 0)
     
-    # Clipping region inside the panel so moving bugs/ground stay cleanly bounded
-    b += '<defs><clipPath id="arena-clip"><rect x="2" y="2" width="896" height="144"/></clipPath></defs>'
-    
     runner_style = """
     @keyframes groundScroll {
       0% { transform: translateX(0px); }
@@ -335,7 +333,7 @@ def build_cat_runner():
     for idx, tok in enumerate(["{ }", "0x1A", "</>", "git push", "=>", "200 OK", "async"]):
         tx = 80 + idx * 165
         ty = 48 + (idx % 2) * 16
-        b += f'<text x="{tx}" y="{ty}" font-family="{MONO}" font-size="11" fill="{CYAN}">{tok}</text>'
+        b += f'<text x="{tx}" y="{ty}" font-family="{MONO}" font-size="11" fill="{CYAN}">{e(tok)}</text>'
     b += '</g>'
     
     # Ground line & scrolling ticks
