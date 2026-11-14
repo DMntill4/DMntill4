@@ -16,12 +16,12 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <table>
   <tr>
-    <td width="50%"><a href="https://github.com/DMntill4?tab=repositories"><img src="./assets/profile/project-deliverybot.svg" width="100%" alt="DeliveryBot: cafeteria ordering over Telegram with an n8n workflow and Google Sheets."></a></td>
-    <td width="50%"><a href="https://portfolio-seven-indol-40.vercel.app/"><img src="./assets/profile/project-portfolio.svg" width="100%" alt="Portfolio: responsive personal site built with React and deployed on Vercel."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/ai-back-office"><img src="./assets/profile/project-ai-back-office.svg" width="100%" alt="AI Back Office: Autonomous ReAct agent for procurement and logistics with Grok xAI and Supabase."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/DMntill4?tab=repositories"><img src="./assets/profile/project-pizzeria-db.svg" width="100%" alt="Pizzeria DB: relational model for restaurant operations in MySQL."></a></td>
-    <td width="50%"><a href="https://github.com/DMntill4?tab=repositories"><img src="./assets/profile/project-next.svg" width="100%" alt="Next: a SaaS product with AI features, in progress."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/Proyecto_DeliveryBot_MantillaDiego"><img src="./assets/profile/project-deliverybot.svg" width="100%" alt="DeliveryBot: cafeteria ordering over Telegram with an n8n workflow and Google Sheets."></a></td>
+    <td width="50%"><a href="https://portfolio-seven-indol-40.vercel.app/"><img src="./assets/profile/project-portfolio.svg" width="100%" alt="Portfolio: responsive personal site built with React and deployed on Vercel."></a></td>
   </tr>
 </table>
 

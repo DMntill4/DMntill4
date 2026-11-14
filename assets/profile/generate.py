@@ -102,10 +102,10 @@ def project(name, glyph, title, l1, l2, tech, status, dot):
     b += f'<path d="M{w-46} {h-34} L{w-34} {h-46} M{w-44} {h-46} H{w-34} V{h-36}" stroke="{BG}" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
     svg(w, h, b, f"project-{name}.svg")
 
-project("deliverybot", "</>", "DeliveryBot", "Cafeteria ordering over Telegram, run by an n8n", "workflow and logged in Google Sheets.", ["n8n", "Telegram", "Sheets"], "WORKFLOW", CYAN)
-project("portfolio", "{ }", "Portfolio", "Responsive personal site with my work,", "built with React and deployed on Vercel.", ["React", "Vite", "Tailwind"], "LIVE", GREEN)
-project("pizzeria-db", "DB", "Pizzeria DB", "Relational model for restaurant operations:", "normalization, FKs and reporting queries.", ["MySQL", "SQL"], "DATABASE", BLUE)
-project("next", "AI", "Next: SaaS + AI", "A product in progress that pairs a solid backend", "with AI features that solve a real problem.", ["Python", "LLM APIs"], "IN PROGRESS", "#febc2e")
+project("ai-back-office", "AI", "AI Back Office", "Autonomous ReAct agent for procurement & logistics", "with Grok xAI, Supabase PG & Drizzle ORM.", ["Grok", "TypeScript", "PostgreSQL", "Fastify"], "AGENT", CYAN)
+project("opus-rentals", "SaaS", "Opus Rentals", "Full-stack rental platform: Spring Boot 3, DDD,", "4NF relational DB and responsive web client.", ["Java 21", "Spring Boot", "MySQL", "Docker"], "ENTERPRISE", GREEN)
+project("deliverybot", "</>", "DeliveryBot", "Cafeteria ordering over Telegram, run by an n8n", "workflow and logged in Google Sheets.", ["n8n", "Telegram", "Sheets"], "WORKFLOW", "#febc2e")
+project("portfolio", "{ }", "Portfolio", "Responsive personal site with my work,", "built with React and deployed on Vercel.", ["React", "Vite", "Tailwind"], "LIVE", BLUE)
 
 # ---------------- CONTACT ----------------
 b = panel(900, 170, 24)
