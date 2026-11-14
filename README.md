@@ -16,12 +16,12 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <table>
   <tr>
-    <td width="50%"><a href="https://github.com/DMntill4/ai-back-office"><img src="./assets/profile/project-ai-back-office.svg" width="100%" alt="AI Back Office: Autonomous ReAct agent for procurement and logistics with Grok xAI and Supabase."></a></td>
-    <td width="50%"><a href="https://github.com/DMntill4/SICA"><img src="./assets/profile/project-sica.svg" width="100%" alt="SICA: Integrated Access Control System with Hexagonal Architecture and 128D Facial Biometrics AI."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/ai-back-office"><img src="./assets/profile/project-ai-back-office.svg?v=3" width="100%" alt="AI Back Office: Autonomous ReAct agent for procurement and logistics with Grok xAI and Supabase."></a></td>
+    <td width="50%"><a href="https://github.com/DMntill4/SICA"><img src="./assets/profile/project-sica.svg?v=3" width="100%" alt="SICA: Integrated Access Control System with Hexagonal Architecture and 128D Facial Biometrics AI."></a></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
-    <td width="50%"><img src="./assets/profile/project-restora.svg" width="100%" alt="Restora: Multi-tenant SaaS platform for restaurant operations with FEFO inventory and AI OCR. (Private / Soon)"></td>
+    <td width="50%"><a href="https://github.com/DMntill4/opus-rentals"><img src="./assets/profile/project-opus-rentals.svg?v=3" width="100%" alt="Opus Rentals: Full-stack rental platform with Spring Boot 3, DDD and 4NF relational database."></a></td>
+    <td width="50%"><img src="./assets/profile/project-restora.svg?v=3" width="100%" alt="Restora: Multi-tenant SaaS platform for restaurant operations with FEFO inventory and AI OCR. (Work in Progress)"></td>
   </tr>
 </table>
 
@@ -43,7 +43,7 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <img src="./assets/profile/section-activity.svg" width="100%" alt="Activity & Stats">
 
-<img src="./assets/profile/activity-card.svg" width="100%" alt="Diego Mantilla GitHub Activity & Dev Cat Business Card">
+<img src="./assets/profile/activity-card.svg?v=3" width="100%" alt="Diego Mantilla GitHub Activity & Dev Cat Business Card">
 
 <br/>
 
