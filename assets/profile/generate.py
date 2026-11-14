@@ -313,12 +313,22 @@ def build_cat_runner():
       0%, 100% { opacity: 0.35; }
       50% { opacity: 1; }
     }
+    @keyframes rainSlow {
+      0% { transform: translate(0px, -148px); }
+      100% { transform: translate(-26px, 0px); }
+    }
+    @keyframes rainFast {
+      0% { transform: translate(0px, -148px); }
+      100% { transform: translate(-32px, 0px); }
+    }
     .ground-track { animation: groundScroll 1.2s linear infinite; }
     .bg-code { animation: bgParallax 12s linear infinite; }
     .runner-cat { animation: catJump 4.8s cubic-bezier(0.35, 0, 0.25, 1) infinite; transform-origin: 120px 100px; }
     .obs-1 { animation: bugScroll 4.8s linear infinite; }
     .obs-2 { animation: bugScroll 4.8s linear -2.4s infinite; }
     .live-dot { animation: pulseDot 1.6s ease-in-out infinite; }
+    .rain-a { animation: rainSlow 1.1s linear infinite; }
+    .rain-b { animation: rainFast 0.78s linear infinite; }
     """
     
     # Top HUD bar
@@ -327,6 +337,22 @@ def build_cat_runner():
     b += f'<text x="726" y="24" font-family="{MONO}" font-size="10.5" fill="{MUTED}" letter-spacing="0.8">DODGING BUGS · HI 99999</text>'
     
     b += '<g clip-path="url(#arena-clip)">'
+    
+    # Subtle diagonal rain effect (2 depth layers, seamless loop)
+    b += '<g class="rain-a" stroke="#38bdf8" stroke-opacity="0.14" stroke-width="1">'
+    for rx_pos in range(20, 960, 42):
+        ry_off = (rx_pos * 17) % 120
+        for dy in (0, 148):
+            y1 = ry_off + dy
+            b += f'<line x1="{rx_pos}" y1="{y1}" x2="{rx_pos-4}" y2="{y1+14}"/>'
+    b += '</g>'
+    b += '<g class="rain-b" stroke="#93c5fd" stroke-opacity="0.20" stroke-width="1">'
+    for rx_pos in range(38, 960, 68):
+        ry_off = (rx_pos * 23) % 110
+        for dy in (0, 148):
+            y1 = ry_off + dy
+            b += f'<line x1="{rx_pos}" y1="{y1}" x2="{rx_pos-5}" y2="{y1+18}"/>'
+    b += '</g>'
     
     # Subtle parallax code tokens in background
     b += '<g class="bg-code" opacity="0.16">'

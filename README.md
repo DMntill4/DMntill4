@@ -45,7 +45,7 @@ Based in Floridablanca, Colombia · English and Spanish
 
 <img src="./assets/profile/activity-card.svg?v=5" width="100%" alt="Diego Mantilla GitHub Activity & Dev Cat Business Card">
 
-<img src="./assets/profile/cat-vs-bugs.svg?v=6" width="100%" alt="Cat vs Bugs: Animated 2D runner mini-game">
+<img src="./assets/profile/cat-vs-bugs.svg?v=7" width="100%" alt="Cat vs Bugs: Animated 2D runner mini-game">
 
 <br/>
 
